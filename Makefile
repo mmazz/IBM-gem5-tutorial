@@ -1,5 +1,3 @@
-
-
 CC := gcc-4.8
 CPP := g++-4.8
 CFLAGS := -g -O3
@@ -16,14 +14,13 @@ TEST_PROGS := $(TEST_OBJS:.o=)
 .PHONY: default clean
 
 default: $(TEST_PROGS)
-
-clean:
-	$(RM)  $(TEST_OBJS) $(TEST_PROGS) $(TEST_OBJS:.o=_p)
-
 $(TEST_PROGS): $(TEST_OBJS)
 	$(CPP)  -static -o $@  $@.o ../m5threads/pthread.o
 
 %.o: %.cpp
-    $(CPP) $(CPPFLAGS)  -c -o $@ $*.cpp
+	$(CPP) $(CPPFLAGS)  -c -o $@ $*.cpp
 
+
+clean:
+	$(RM)  $(TEST_OBJS) $(TEST_PROGS) $(TEST_OBJS:.o)
 
