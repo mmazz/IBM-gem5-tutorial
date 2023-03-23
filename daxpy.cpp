@@ -31,7 +31,7 @@ void* daxpy(void* arguments)	{
 
 
 int main() {
-	int N = 4; // number of threads
+	int N = 2; // number of threads
 	int size = 10; // number of threads
 	int a[size];
 	int b[size];
@@ -56,7 +56,7 @@ int main() {
         if (pthread_create(&threads[i], NULL, &daxpy, (void *) &args) != 0){
             return 1;
         }
-        sleep(0.1);
+        sleep(0.5);
     }
     for(int k=0; k<N; k++){
         if(pthread_join(threads[k], NULL) != 0) {
