@@ -56,8 +56,6 @@ WORKDIR /home/mmazz/gem5
 #RUN echo " " | echo y | scons build/X86/gem5.opt -j10
 RUN scons /home/mmazz/gem5/build/X86/gem5.opt -j10
 WORKDIR /home/mmazz/gem5
-WORKDIR /home/mmazz/gem5
-RUN rm -rf /home/mmazz/gem5/IBM-gem5-tutorial
 RUN git clone https://github.com/mmazz/IBM-gem5-tutorial.git
 RUN  cp /home/mmazz/gem5/IBM-gem5-tutorial/tests/Makefile /home/mmazz/gem5/m5threads/tests
 WORKDIR /home/mmazz/gem5/m5threads/tests
