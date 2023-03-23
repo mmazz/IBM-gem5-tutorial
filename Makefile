@@ -14,6 +14,7 @@ TEST_PROGS := $(TEST_OBJS:.o=)
 .PHONY: default clean
 
 default: $(TEST_PROGS)
+
 $(TEST_PROGS): $(TEST_OBJS)
 	$(CPP)  -static -o $@  $@.o ../m5threads/pthread.o
 
