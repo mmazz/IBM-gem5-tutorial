@@ -8,6 +8,11 @@ sudo docker run --rm -it _tagName_
 
 sudo docker image pull mmazzanti/newgem5
 
+# Using se.py
+
+./build/X86/gem5.opt configs/example/se.py --cmd=IBM-gem5-tutorial/daxpy -n3  --cpu-type=X86TimingSimpleCPU --l1d_size=64kB --l1i_size=16kB --l2cache --l2_size=256kB --caches
+
+- Problem: First thread dont work.
 
 # Files
 
