@@ -18,12 +18,12 @@ TEST_PROGS := $(TEST_OBJS:.o=)
 default: $(TEST_PROGS)
 
 clean:
-        $(RM)  $(TEST_OBJS) $(TEST_PROGS) $(TEST_OBJS:.o=_p)
+	$(RM)  $(TEST_OBJS) $(TEST_PROGS) $(TEST_OBJS:.o=_p)
 
 $(TEST_PROGS): $(TEST_OBJS)
-        $(CPP)  -static -o $@  $@.o ../m5threads/pthread.o
+	$(CPP)  -static -o $@  $@.o ../m5threads/pthread.o
 
 %.o: %.cpp
-        $(CPP) $(CPPFLAGS)  -c -o $@ $*.cpp
+    $(CPP) $(CPPFLAGS)  -c -o $@ $*.cpp
 
 
