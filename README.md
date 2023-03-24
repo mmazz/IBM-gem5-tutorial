@@ -22,3 +22,13 @@ sudo docker image pull mmazzanti/newgem5
 - daxpy.cpp is the implementation using pthread.
 - cache.py  and two_level.py are the tutorial scripts for part1 of the learning
 course of gem5.
+
+
+# Compile wiht m5Threads
+
+g++-4.8  -c -o _file_.o _file_.cpp
+g++-4.8  -static -o _file_  _file_.o  path/m5threads/pthread.o
+
+
+
+
